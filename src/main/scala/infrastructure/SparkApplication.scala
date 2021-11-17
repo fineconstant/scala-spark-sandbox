@@ -6,7 +6,7 @@ import infrastructure.io.{Csv, Json, Parquet, Text}
 import org.apache.spark.sql.SparkSession
 
 trait SparkApplication extends App with Csv with Json with Parquet with Text {
-  lazy val sparkSession: SparkSession = {
+  final lazy val sparkSession: SparkSession = {
     val session = SparkSession
       .builder()
       .appName("spark-sandbox")
@@ -17,5 +17,4 @@ trait SparkApplication extends App with Csv with Json with Parquet with Text {
 
     session
   }
-
 }
