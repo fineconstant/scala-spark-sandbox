@@ -3,4 +3,5 @@
 target
 project/target
 spark-warehouse
-resources/*.*
+!resources/.gitkeep
+resources
