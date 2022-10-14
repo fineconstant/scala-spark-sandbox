@@ -10,7 +10,8 @@ trait SparkApplication extends App with Csv with Json with Parquet with Text {
     val session = SparkSession
       .builder()
       .appName("spark-sandbox")
-      .master("local[4]")
+      .master("local[*]")
+      .config("spark.driver.host", "localhost")
       .getOrCreate()
 
     session.sparkContext.setLogLevel("warn")
