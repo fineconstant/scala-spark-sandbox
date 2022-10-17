@@ -7,4 +7,4 @@
 ## Documentation
 
 * [Spark SQL](https://spark.apache.org/docs/latest/sql-programming-guide.html)
-* [Spark SQL Functions](https://spark.apache.org/docs/latest/api/sql/index.html)
+* [Spark SQL Functions](https://spark.apache.org/docs/latest/api/scala/org/apache/spark/sql/functions$.html)
