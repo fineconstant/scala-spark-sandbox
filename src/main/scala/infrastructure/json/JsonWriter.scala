@@ -7,6 +7,6 @@ private[infrastructure] trait JsonWriter {
   implicit class JsonDataFrame[T](xs: Dataset[T]) {
     def jsonWrite(file: Symbol): Unit = jsonWrite(Json.localJsonFile(file))
 
-    def jsonWrite(path: String): Unit = xs.repartition(1).write.mode(SaveMode.Overwrite).json(path)
+    def jsonWrite(path: String): Unit = xs.write.mode(SaveMode.Overwrite).json(path)
   }
 }
