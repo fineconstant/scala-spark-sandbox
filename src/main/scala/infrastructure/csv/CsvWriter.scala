@@ -8,5 +8,9 @@ private[infrastructure] trait CsvWriter {
     def csvWrite(file: Symbol): Unit = csvWrite(Csv.localCsvFile(file))
 
     def csvWrite(path: String): Unit = xs.write.mode(SaveMode.Overwrite).options(Csv.DefaultOptions).csv(path)
+
+    def excelWrite(file: Symbol): Unit = excelWrite(Csv.localCsvFile(file))
+
+    def excelWrite(path: String): Unit = xs.write.mode(SaveMode.Overwrite).options(Csv.ExcelOptions).csv(path)
   }
 }
