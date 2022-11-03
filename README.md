@@ -3,6 +3,7 @@
 ## Requirements
 
 1. `native-hadoop` library for your platform to increase the performance.  
+   Not available for macOS.
 
 ## Documentation
 
